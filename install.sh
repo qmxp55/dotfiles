@@ -75,6 +75,15 @@ mkdir ~/.config/polybar
 echo -e "Copying ${LBLUE}polybar${NC} files into ~/.config/polybar"
 cp polybar/* ~/.config/polybar/
 
+if [ -f pkglist ]; then
+    echo -e "backing ${LBLUE}pkglist${NC} to $olddir"
+    mv pkglist $olddir
+else
+    echo -e "file ${LBLUE}pkglist${NC} does not exist."
+fi
+
+echo -e "Creating the ${LBLUE}pkglist${NC} file"
+pacman -Qqe | grep -v "$(pacman -Qmq)" > pkglist
 
 printf "${LRED}-------------------------------------------\n"
 printf "${YELLOW} WELL DONE! \n ${CYAN}THE TARDIS MATRIX HAS BEEN UPDATED! \n THIS LAPTOP CAN'T BE IN BETTER HANDS \n"
