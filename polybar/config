@@ -1,0 +1,407 @@
+[colors]
+color15_i3wmthemer	    = ${xrdb:color15}
+color14_i3wmthemer	    = ${xrdb:color14}
+color13_i3wmthemer	    = ${xrdb:color13}
+color12_i3wmthemer	    = ${xrdb:color12}
+color11_i3wmthemer	    = ${xrdb:color11}
+color10_i3wmthemer	    = ${xrdb:color10}
+color09_i3wmthemer	    = ${xrdb:color9}
+color08_i3wmthemer	    = ${xrdb:color8}
+color07_i3wmthemer	    = ${xrdb:color7}
+color06_i3wmthemer	    = ${xrdb:color6}
+color05_i3wmthemer	    = ${xrdb:color5}
+color04_i3wmthemer	    = #ff4d4d
+color03_i3wmthemer	    = ${xrdb:color3}
+color02_i3wmthemer	    = ${xrdb:color2}
+color01_i3wmthemer      = ${xrdb:color1}
+color00_i3wmthemer	      = ${xrdb:color0}
+foreground_i3wmthemer 	= #ff4d4d
+background_i3wmthemer 	= #DA222222
+black = #000
+white = #fff
+blue = #00f
+green = #0f0
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+
+[colours]
+;bg =    #f23
+bg = #DA222222
+;bg = ${colors.blue}
+;bg = #000f0f0f
+;icons =  #259E83
+icons = #e8e8e8
+white = #e8e8e8
+red =   #ff4d4d
+grey =  #33
+clear = #00
+yellow = #f9a825
+
+[bar/top]
+monitor = eDP-1
+width = 100%
+height = 30
+radius = 0
+;bottom = true
+fixed-center = true
+background = ${colours.bg}
+;foreground = ${colours.icons}
+
+border-size = 0
+border-bottom-size = 0
+
+border-color =${colours.clear}
+border-bottom-color = ${colours.clear}
+
+border-top-size = 0 
+border-top-color = ${colours.clear}
+
+padding = 3
+module-margin = 1 
+
+font-0 = Roboto Slab:size=10:weight=Regular;1
+;font-0 = Poly:size=11:weight=Light;1
+;font-0 = System San Francisco Display:size=10;2
+;font-0 = Hack:weight=Regular:size=10;1
+;font-0 = Source Code Pro:weight=Regular:size=10;1
+font-1 = FontAwesome:size=12;3
+font-2 = MaterialIcons:size=13;5
+font-3 = URW Gothic:size=11;2
+font-4 = Raleway VF Beta:size=11:weight=Regular;1
+;http://fontawesome.io/cheatsheet/
+;https://shanfan.github.io/material-icons-cheatsheet/
+
+;modules-left   = prevsong playpause nextsong music
+modules-center = i3 
+modules-right  = pavolume bluetooth redshift battery1 wireless-network clock powermenubarlauncher
+
+; override-redirect = true
+; wm-restack = i3
+tray-position = right
+tray-padding = 9
+
+
+
+[module/i3]
+type = internal/i3
+strip-wsnumbers = true
+enable-click = true
+enable-scroll = true
+reverse-scroll = false
+;fuzzy-match = true
+
+;bindsym $mod+1 workspace 1
+ws-icon-0 = 1;%{T4}1%{T-}
+;ws-icon-0 = 1;
+ws-icon-1 = 2;%{T4}2%{T-}
+;ws-icon-1 = 2;
+ws-icon-2 = 3;%{T4}3%{T-}
+ws-icon-3 = 4;%{T4}4%{T-}
+ws-icon-4 = 5;%{T4}5%{T-}
+ws-icon-5 = 6;%{T4}6%{T-}
+ws-icon-6 = 7;%{T4}7%{T-}
+ws-icon-8 = 9;%{F#ws}
+ws-icon-7 = 8;%{T4}8%{T-}
+e44332-icon-9 = 10;
+ws-icon-10 = ;
+ws-icon-11 = ;
+
+format = <label-mode> <label-state> <label-mode>
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-foreground =  ${colors.foreground_i3wmthemer}
+;label-mode-background = ${colors.color04_i3wmthemer}
+
+label-focused = %icon% 
+;label-focused-foreground = ${colors.color04_i3wmthemer}
+label-focused-background = #3f3f3f
+label-focused-underline = ${colors.color04_i3wmthemer}
+label-focused-padding = 4
+
+label-unfocused = %icon% 
+label-unfocused-foreground = ${colors.foreground_i3wmthemer}
+label-unfocused-padding = 4
+
+label-visible = %icon%
+label-visible-underline = ${colors.color04_i3wmthemer}
+label-visible-padding = 4
+
+label-urgent = %icon%
+label-urgent-foreground = ${colors.color04_i3wmthemer}
+label-urgent-background = ${colors.background_i3wmthemer}
+label-urgent-padding = 4
+
+
+
+[module/clock]
+type = internal/date
+format = " <label> "
+label = %date%
+label-foreground = ${colours.icons}
+date =  %{F#e8e8e8}%a %b %d %{F#e8e8e8}%l:%M:%S %p
+label-font = 0
+
+
+
+
+[module/pavolume]
+type = custom/script
+tail = true
+label = " %output% "
+label-foreground = ${colours.icons}
+exec = ~/.config/polybar/pavolume.sh --listen
+click-left = amixer -D pulse sset Master toggle
+click-right = exec pavucontrol &
+scroll-down = amixer -D pulse sset Master 2%+
+scroll-up = amixer -D pulse sset Master 2%-  
+ 
+
+
+[module/bluetooth]
+type = custom/script
+interval = 1
+exec = ~/.config/polybar/bluetooth.sh
+label = "  %output% "
+click-left = blueberry
+click-right = ~/.config/polybar/bluetooth.sh --toggle
+
+
+
+[module/music]
+type = custom/script
+interval = 1 
+label = %{T4}%output:0:90:...%%{T-}
+label-foreground = ${colours.icons}
+tail = true
+exec = ~/.config/polybar/mpris.sh
+click-left = ~/.config/polybar/musicWorkspaceSwitcher.sh
+
+
+
+[module/playpause]
+type = custom/script
+label = %output%
+label-foreground = ${colours.icons}
+tail = false
+interval = 1
+exec = ~/.config/polybar/playpause.sh
+click-left = playerctl play-pause
+
+
+
+[module/nextsong]
+type = custom/text
+content = ""
+content-foreground = ${colours.icons}
+click-left = playerctl next
+
+
+
+[module/prevsong]
+type = custom/text
+content = ""
+content-foreground = ${colours.icons}
+click-left = playerctl previous
+
+
+
+
+[module/redshift]
+type = custom/script
+tail = true
+label = "%output%   "
+exec = ~/.config/polybar/redshift.sh
+click-left = redshift -c ~/.config/redshift.conf &
+click-right = redshift -x && pkill -9 redshift &
+
+
+[module/battery1]
+type = internal/battery
+
+battery = BAT1
+adapter = ADP0
+full-at = 100
+
+format-charging = "<animation-charging> <label-charging>"
+format-discharging = " <ramp-capacity> <label-discharging>"
+format-full = " <ramp-capacity> <label-full>"
+
+label-charging-foreground =  ${colors.foreground_i3wmthemer}
+label-discharging-foreground =  ${colors.foreground_i3wmthemer}
+label-full-foreground =  ${colors.foreground_i3wmthemer}
+
+label-charging-font = 0
+label-discharging-font = 0
+label-full-font = 0
+
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = ${colours.red}
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = ${colours.yellow}
+ramp-capacity-2 = 
+ramp-capacity-2-foreground = ${colours.icons}
+ramp-capacity-3-foreground = ${colours.icons}
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-4-foreground = ${colours.icons}
+
+animation-charging-0 =  
+animation-charging-0-foreground = ${colours.icons}
+animation-charging-1 =  
+animation-charging-1-foreground = ${colours.icons}
+animation-charging-2 =  
+animation-charging-2-foreground = ${colours.icons}
+animation-charging-3 =  
+animation-charging-3-foreground = ${colours.icons}
+animation-charging-4 =  
+animation-charging-4-foreground = ${colours.icons}
+animation-charging-framerate = 600
+
+
+[module/wireless-network]
+type = internal/network
+interface = wlp3s0
+interval = 1.0
+ping-interval = 3
+format-connected = <label-connected>
+label-connected = " %{A1:i3-sensible-terminal -e 'sh -c nmtui':} %{F#e8e8e8}%essid%%{A}  "
+label-connected-foreground = ${colours.icons}
+label-disconnected = " %{F#33} "
+label-font = 0
+
+
+
+
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+format = <ramp> <label>
+
+label-foreground =  ${colors.foreground_i3wmthemer}
+
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+ramp-foreground = ${colours.icons}
+
+bar-width = 6
+bar-indicator = 
+bar-fill = 
+bar-fill-font = 3
+bar-fill-foreground =  ${colors.foreground_i3wmthemer}
+bar-empty = 
+bar-empty-font = 3
+bar-empty-foreground = ${colours.grey}
+
+
+
+[module/xwindow]
+type = internal/xwindow
+
+label = %title%
+label-foreground =  ${colors.foreground_i3wmthemer}
+
+
+[module/powermenubarlauncher]
+type = custom/text
+content = "  "
+content-foreground = #cc0000
+click-left = polybar powermenubar
+
+
+
+
+
+
+[bar/powermenubar]
+;monitor = eDP-1
+width = 28%
+height = 32
+radius = 0
+
+background = #DA222222
+foreground =  ${colors.foreground_i3wmthemer}
+
+border-size = 0
+border-color =${colours.clear}
+
+border-bottom-size = 0
+border-bottom-color = ${colours.clear}
+
+border-top-size = 0
+border-top-color = ${colours.clear}
+
+border-right-size = 0
+; border-right-color = ${colours.clear}
+
+offset-x = 0
+offset-y = 0
+
+
+padding = 3
+module-margin = 2 
+separator = %{F#33}|
+
+font-0 = System San Francisco Display:size=10;2
+font-1 = FontAwesome:size=14;3
+font-2 = MaterialIcons:size=14;4
+;http://fontawesome.io/cheatsheet/
+;https://shanfan.github.io/material-icons-cheatsheet/
+
+modules-left = lock logout suspend reboot poweroff closepowermenubar
+
+override-redirect = true
+wm-restack = i3
+
+
+
+
+[module/lock]
+type = custom/text
+content = "%{F#259E83} %{F-}Lock"
+click-left = "pkill -n polybar ; sh ~/.config/i3/Lock.sh"
+
+
+[module/suspend]
+type = custom/text
+content = "%{F#259E83} %{F-}Suspend"
+click-left = "pkill -n polybar ; sh ~/.config/i3/Lock.sh && systemctl suspend"
+
+
+[module/logout]
+type = custom/text
+content = "%{F#259E83} %{F-}Logout"
+click-left = "pkill -n polybar ; i3-msg exit"
+
+
+[module/reboot]
+type = custom/text
+content = "%{F#259E83} %{F-}Reboot"
+click-left = "pkill -n polybar ; systemctl reboot"
+
+
+[module/poweroff]
+type = custom/text
+content = "%{F#259E83} %{F-}Poweroff"
+click-left = "pkill -n polybar ; systemctl poweroff"
+
+
+
+[module/closepowermenubar]
+type = custom/text
+content = "%{F#259E83} %{F-}Cancel"
+click-left = "pkill -n polybar"
+
+
+
+
+[settings]
+throttle-output = 10
+throttle-output-for = 10
+throttle-input-for = 30

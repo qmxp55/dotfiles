@@ -1,0 +1,2 @@
+To configure OneDrive follow instructions from: https://github.com/skilion/onedrive
+To sync onedrive run: onedrive --resync
