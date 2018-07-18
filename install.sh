@@ -82,8 +82,19 @@ else
     echo -e "file ${LBLUE}pkglist${NC} does not exist."
 fi
 
+if [ -f aur_pkglist ]; then
+    echo -e "backing ${LBLUE}AUR pkglist${NC} to $olddir"
+    mv aur_pkglist $olddir
+else
+    echo -e "file ${LBLUE}aur_pkglist${NC} does not exist."
+fi
+
 echo -e "Creating the ${LBLUE}pkglist${NC} file"
 pacman -Qqe | grep -v "$(pacman -Qmq)" > pkglist
+
+
+echo -e "Creating the ${LBLUE}AUR pkglist${NC} file"
+pacman -Qmq > aur_pkglist
 
 printf "${LRED}-------------------------------------------\n"
 printf "${YELLOW} WELL DONE! \n ${CYAN}THE TARDIS MATRIX HAS BEEN UPDATED! \n THIS LAPTOP CAN'T BE IN BETTER HANDS \n"
