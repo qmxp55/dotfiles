@@ -74,7 +74,7 @@ font-4 = Raleway VF Beta:size=11:weight=Regular;1
 ;http://fontawesome.io/cheatsheet/
 ;https://shanfan.github.io/material-icons-cheatsheet/
 
-modules-left   = prevsong playpause nextsong music
+modules-left   = prevsong playpause nextsong music memory cpu
 modules-center = i3 
 modules-right  = pavolume bluetooth redshift battery1 wireless-network clock powermenubarlauncher
 
