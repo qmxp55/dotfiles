@@ -79,6 +79,7 @@ gzip
 haveged
 hostapd
 hplip
+htop
 i3-gaps
 i3lock
 i3status
@@ -97,6 +98,7 @@ libreoffice-fresh-en-gb
 libtool
 licenses
 linux
+linux-headers
 logrotate
 lua
 lvm2
@@ -124,6 +126,7 @@ os-prober
 pacman
 patch
 pciutils
+pcsclite
 pepper-flash
 perl
 pkgfile
@@ -173,6 +176,7 @@ unzip
 usb_modeswitch
 usbutils
 util-linux
+vbam-wx
 vi
 vim
 virtualbox
@@ -191,3 +195,4 @@ xpad
 yaourt
 youtube-dl
 zsh
+zsnes

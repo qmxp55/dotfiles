@@ -3,6 +3,7 @@ aladin
 arandr-git
 atom-editor-bin
 compton-git
+crack-attack
 dcadec
 deepin-qml-widgets
 deepin-wm-switcher
@@ -40,6 +41,7 @@ mingw-w64-headers
 mingw-w64-pkg-config
 mingw-w64-winpthreads
 munge
+ncurses5-compat-libs
 pcmciautils
 pkg-config
 pokemon-terminal-git
@@ -59,5 +61,6 @@ ttf-font-icons
 ttf-mac-fonts
 ttf-material-design-icons
 tty-clock
+vmware-patch
 vuze
 zd1211-firmware
