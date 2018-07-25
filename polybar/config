@@ -74,7 +74,7 @@ font-4 = Raleway VF Beta:size=11:weight=Regular;1
 ;http://fontawesome.io/cheatsheet/
 ;https://shanfan.github.io/material-icons-cheatsheet/
 
-modules-left   = prevsong playpause nextsong music memory cpu
+modules-left   = prevsong playpause nextsong music memory cpu filesystem
 modules-center = i3 
 modules-right  = pavolume bluetooth redshift battery1 wireless-network clock powermenubarlauncher
 
@@ -340,7 +340,25 @@ label-disconnected = " %{F#33} "
 label-font = 0
 
 
-
+[module/filesystem]
+type = internal/fs
+interval = 10
+mount-0 = /
+;mount-1 = /home
+;mount-2 = /invalid/mountpoint
+format-mounted =   <bar-used><label-mounted>
+format-mounted-background = #f9f9f9
+format-mounted-foreground = #945dff
+format-mounted-padding = 2
+label-mounted = %percentage_used%%
+;label-unmounted = %mountpoint%: not mounted
+label-unmounted-foreground = #ffffff
+bar-used-indicator =
+bar-used-width = 5
+bar-used-foreground-0 = #2b2b2b
+bar-used-fill = 
+bar-used-empty = 
+bar-used-empty-foreground = #CEB6FF
 
 
 [module/backlight]
