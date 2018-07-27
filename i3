@@ -231,8 +231,8 @@ exec --no-startup-id feh --bg-scale /home/omar/Pictures/rick_morty.jpg
 exec --no-startup-id conky -c ~/.conky.conf
 
 #polybar
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always pkill -9 polybar ; polybar top
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#exec_always pkill -9 polybar ; polybar top
 #wifi
 exec --no-startup-id nm-applet
 #print screen
