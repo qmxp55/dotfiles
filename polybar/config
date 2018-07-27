@@ -41,7 +41,7 @@ clear = #00
 yellow = #f9a825
 
 [bar/top]
-;monitor = eDP-1
+monitor = ${env:MONITOR} 
 width = 100%
 height = 30
 radius = 0
