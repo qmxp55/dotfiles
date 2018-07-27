@@ -1,0 +1,20 @@
+Host cosma
+    HostName charon.dur.ac.uk
+    User qmxp55
+
+Host edison
+    HostName edison.nersc.gov
+    User qmxp55
+
+Host stargate
+    HostName stargate.dur.ac.uk
+    User qmxp55
+
+Host webpage
+    HostName duss0.dur.ac.uk
+    User qmxp55
+
+Host colfax
+User u15340
+IdentityFile ~/Downloads/colfax-access-key-15340
+ProxyCommand ssh -T -i ~/Downloads/colfax-access-key-15340 guest@cluster.colfaxresearch.com

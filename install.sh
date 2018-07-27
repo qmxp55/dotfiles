@@ -67,13 +67,19 @@ for file_config in $files_config; do
 done
 
 
-echo -e "Moving ${YELLOW}polybar${NC} to $olddir"
+echo -e "Moving ${YELLOW}polybar and SSH${NC} to $olddir"
 rm -r ~/dotfiles_old/polybar
+rm -r ~/dotfiles_old/ssh
 mv ~/.config/polybar ~/dotfiles_old/
+mv ~/.ssh ~/dotfiles_old/ssh
 #rm -r ~/.config/polybar
 mkdir ~/.config/polybar 
-echo -e "Copying ${LBLUE}polybar${NC} files into ~/.config/polybar"
+mkdir ~/.ssh
+echo -e "Copying ${LBLUE}polybar and SSH${NC} files into ~/.config/polybar"
 cp polybar/* ~/.config/polybar/
+cp ssh/* ~/.ssh/
+
+
 
 if [ -f pkglist ]; then
     echo -e "backing ${LBLUE}pkglist${NC} to $olddir"
@@ -88,6 +94,9 @@ if [ -f aur_pkglist ]; then
 else
     echo -e "file ${LBLUE}aur_pkglist${NC} does not exist."
 fi
+
+
+
 
 echo -e "Creating the ${LBLUE}pkglist${NC} file"
 pacman -Qqe | grep -v "$(pacman -Qmq)" > pkglist
