@@ -14,7 +14,7 @@ if type "xrandr"; then
     MONITOR=$m polybar top &
   done
 else
-  polybar top &
+ MONITOR=eDP-1 polybar top &
 fi
 
 echo "Bars launched..."

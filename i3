@@ -218,8 +218,13 @@ bindsym $mod+r mode "resize"
 #}
 
 # Audio
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec "amixer -c 0 set PCM 3dB+"
+#volume
+bindsym XF86AudioLowerVolume exec "amixer -c 0 set PCM 3dB-"
+#volume
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec amixer -q set Master toggle
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbright +20
