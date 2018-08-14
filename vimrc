@@ -136,6 +136,8 @@ set pastetoggle=<F11>
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+" Custom 
+set clipboard=unnamedplus
  
 " Indentation settings for using hard tabs for indent. Display tabs as
 " four characters wide.

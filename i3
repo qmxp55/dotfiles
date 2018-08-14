@@ -1,4 +1,4 @@
-aet_from_resource	  $color15_i3wmthemer	    color15
+#set_from_resource	  $color15_i3wmthemer	    color15
 #set_from_resource	  $color14_i3wmthemer	    color14
 #set_from_resource	  $color13_i3wmthemer	    color13
 #set_from_resource	  $color12_i3wmthemer	    color12
@@ -426,4 +426,7 @@ exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 # 	Xresources, xmodmap, start urxvt daemon
 exec --no-startup-id "/usr/bin/xmodmap /home/<user>/.keymap"
 exec --no-startup-id "/usr/bin/urxvtd -q -f -o"
-exec --no-startup-id setxkbmap -layout gb
+exec --no-startup-id setxkbmap -layout gb,es
+bindsym $mod+F1 exec setxkbmap -layout gb
+bindsym $mod+F2 exec setxkbmap -layout es
+
