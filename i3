@@ -131,9 +131,12 @@ bindsym $mod+a focus parent
 #set $WS5   5:  Media
 #set $WS6   6:  Chat
 #set $WS7   7:  Doc
-#set $WS8   8:  Down
+#set $WS8   "8:  eMail"
 #set $WS9   9:  Conf
 #set $WS0   10:  Games
+
+#assign [class="Thunderbird"] workspace 8
+#assign [class="thunderbird"] → workspace 8
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -143,7 +146,7 @@ bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
+bindsym $mod+8 workspace 8 
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 bindsym $mod+Tab workspace next
