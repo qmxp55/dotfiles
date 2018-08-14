@@ -127,8 +127,11 @@ pacman
 patch
 pciutils
 pcsclite
+pdfsam
+pdfshuffler
 pepper-flash
 perl
+pkgconf
 pkgfile
 powerline-fonts
 procps-ng
@@ -169,6 +172,7 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-science
+thunderbird
 transset-df
 ttf-font-awesome
 unrar
@@ -190,6 +194,7 @@ wine
 wireless_tools
 wpa_actiond
 xcompmgr
+xfce4-appfinder
 xfsprogs
 xpad
 yaourt
