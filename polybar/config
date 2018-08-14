@@ -78,7 +78,7 @@ font-4 = Raleway VF Beta:size=11:weight=Regular;1
 
 modules-left   = prevsong playpause nextsong music memory cpu filesystem
 modules-center = i3 
-modules-right  = pavolume bluetooth redshift battery1 wireless-network clock powermenubarlauncher
+modules-right  = keyboard pavolume bluetooth redshift battery1 wireless-network clock powermenubarlauncher
 
 ; override-redirect = true
 ; wm-restack = i3
@@ -224,7 +224,35 @@ click-right = exec pavucontrol &
 scroll-down = amixer -D pulse sset Master 2%+
 scroll-up = amixer -D pulse sset Master 2%-  
  
+[module/keyboard]
+type = internal/xkeyboard
 
+; List of indicators to ignore
+blacklist-0 = num lock
+blacklist-1 = scroll lock
+
+; Available tags:
+;   <label-layout> (default)
+;   <label-indicator> (default)
+format = <label-layout> <label-indicator>
+format-spacing = 0
+
+; Available tokens:
+;   %layout%
+;   %name%
+;   %number%
+; Default: %layout%
+label-layout = %name%
+label-layout-padding = 2
+label-layout-background = #bc99ed
+label-layout-foreground = #000
+
+; Available tokens:
+;   %name%
+; Default: %name%
+label-indicator = %name%
+label-indicator-padding = 2
+label-indicator-background = #8139e8
 
 [module/bluetooth]
 type = custom/script

@@ -1,4 +1,4 @@
-#set_from_resource	  $color15_i3wmthemer	    color15
+aet_from_resource	  $color15_i3wmthemer	    color15
 #set_from_resource	  $color14_i3wmthemer	    color14
 #set_from_resource	  $color13_i3wmthemer	    color13
 #set_from_resource	  $color12_i3wmthemer	    color12
@@ -278,7 +278,11 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id flameshot
 
 #conectar pantalla
-bindsym $mod+shift+m exec arandr
+#bindsym $mod+shift+m exec arandr
+bindsym XF86Display exec arandr
+
+#Launch xfce4-appfinder
+bindsym XF86Tools exec xfce4-appfinder
 
 #natural scrolling and tab
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1

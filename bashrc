@@ -59,6 +59,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias shit='history | grep '
+
 #export LC_ALL=es_VE.UTF-8
 
 #	Colors:
