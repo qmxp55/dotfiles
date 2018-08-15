@@ -146,7 +146,7 @@ bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8 
+bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 bindsym $mod+Tab workspace next
@@ -433,3 +433,8 @@ exec --no-startup-id setxkbmap -layout gb,es
 bindsym $mod+F1 exec setxkbmap -layout gb
 bindsym $mod+F2 exec setxkbmap -layout es
 
+exec --no-startup-id "source ~/.bashrc"
+
+exec --no-startup-id i3-msg 'workspace 10; exec thunderbird'
+exec --no-startup-id i3-msg 'workspace 9; exec spotify'
+exec --no-startup-id i3-msg 'workspace 1; exec firefox'

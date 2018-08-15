@@ -94,20 +94,16 @@ reverse-scroll = true
 ;fuzzy-match = true
 
 ;bindsym $mod+1 workspace 1
-ws-icon-0 = 1;%{T4}1%{T-}
-;ws-icon-1 = 1;
+ws-icon-0 = 1;
 ws-icon-1 = 2;%{T4}2%{T-}
-;ws-icon-1 = 2;
 ws-icon-2 = 3;%{T4}3%{T-}
 ws-icon-3 = 4;%{T4}4%{T-}
 ws-icon-4 = 5;%{T4}5%{T-}
 ws-icon-5 = 6;%{T4}6%{T-}
 ws-icon-6 = 7;%{T4}7%{T-}
-;ws-icon-7 = 8;%{F#ws}
-ws-icon-7 = 8; 
-;e44332-icon-9 = 10;
-ws-icon-8 = 9; 
-ws-icon-9 = 10;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
 
 format = <label-mode> <label-state> <label-mode>
 label-mode = %mode%
@@ -227,7 +223,7 @@ scroll-up = amixer -D pulse sset Master 2%-
 [module/keyboard]
 type = internal/xkeyboard
 
-format-prefix =   
+format-prefix =
 format-prefix-foreground = #07fc59
 format-prefix-underline = #bc99ed
 ; List of indicators to ignore
