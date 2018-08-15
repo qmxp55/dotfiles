@@ -61,7 +61,7 @@ border-bottom-color = ${colours.clear}
 border-top-size = 0 
 border-top-color = ${colours.clear}
 
-padding = 3
+padding = 4
 module-margin = 1 
 
 ;font-0 = Roboto Slab:size=10:weight=Regular;1
@@ -76,9 +76,12 @@ font-4 = Raleway VF Beta:size=11:weight=Regular;1
 ;http://fontawesome.io/cheatsheet/
 ;https://shanfan.github.io/material-icons-cheatsheet/
 
-modules-left   = prevsong playpause nextsong music memory cpu filesystem
+modules-left   = sp spp sn spotify memory cpu filesystem
 modules-center = i3 
 modules-right  = keyboard pavolume bluetooth redshift battery1 wireless-network clock powermenubarlauncher
+
+
+separator = |
 
 ; override-redirect = true
 ; wm-restack = i3
@@ -278,6 +281,69 @@ tail = true
 exec = ~/.config/polybar/mpris.sh
 ;click-left = ~/.config/polybar/musicWorkspaceSwitcher.sh
 
+[colors]
+seven =  ${xrdb:color0:#222}
+one =   ${xrdb:color1:#222}
+two =   ${xrdb:color2:#222}
+three = ${xrdb:color3:#222}
+four =  ${xrdb:color4:#222}
+five =  ${xrdb:color5:#222}
+six =   ${xrdb:color6:#222}
+zero = ${xrdb:color7:#222}
+eight = ${xrdb:color8:#222}
+nine = ${xrdb:color9:#222}
+ten = ${xrdb:color10:#222}
+eleven = ${xrdb:color11:#222}
+twelve = ${xrdb:color12:#222}
+thirteen = ${xrdb:color13:#222}
+fourteen = ${xrdb:color14:#222}
+fifhteen = ${xrdb:color15:#222}
+
+
+;THIS IS MY MODULE FOR SPOTIFY
+[module/sn]
+type = custom/text
+content = "  "
+tail = true
+format = <label>
+;content-background = ${colors.one}
+click-left = spotify-cli --next 
+
+[module/sp]
+type = custom/text
+content = "  "
+;content-background = ${colors.one}
+click-left = spotify-cli --prev
+
+[module/spp]
+type = custom/script
+interval = 1
+exec = /home/omar/dotfiles/polybar/playpause.sh
+format = <label>
+;label = %output%
+;format-background = ${colors.one}
+click-left = spotify-cli --playpause
+
+[module/sps]
+type = custom/text
+content = "  "
+format = <label>
+content-background = ${colors.one}
+
+
+
+
+[module/spotify]
+type = custom/script
+interval = 2
+format = <label>
+format-prefix = "  "
+click-left = xdotool key super+9
+;format-prefix-foreground = ${colors.zero}
+;format-prefix-background = ${colors.four}
+;format-background = ${colors.four}
+exec = /home/omar/dotfiles/polybar/spot.sh
+tail = true
 
 
 [module/playpause]
@@ -350,30 +416,41 @@ ramp-capacity-3 = 
 ramp-capacity-4 = 
 ramp-capacity-4-foreground = #07fc59
 
+;color_charging = #0080ff
 animation-charging-0 =  
-animation-charging-0-foreground = #07fc59
+animation-charging-0-foreground = #ffff00
 animation-charging-1 =  
-animation-charging-1-foreground = #07fc59
+animation-charging-1-foreground = #ffff00
 animation-charging-2 =  
-animation-charging-2-foreground = #07fc59
+animation-charging-2-foreground = #ffff00
 animation-charging-3 =  
-animation-charging-3-foreground = #07fc59
+animation-charging-3-foreground = #ffff00
 animation-charging-4 =  
-animation-charging-4-foreground = #07fc59
+animation-charging-4-foreground = #ffff00
 animation-charging-framerate = 600
 
 
 [module/wireless-network]
 type = internal/network
+ 
 interface = wlp3s0
 interval = 1.0
 ping-interval = 3
-format-connected = <label-connected>
-label-connected = " %{A1:i3-sensible-terminal -e 'sh -c nmtui':} %{F#e8e8e8}%essid%%{A}  "
-label-connected-foreground = #07fc59
+format-connected =  <label-connected> 
+;label-connected = " %{A1:i3-sensible-terminal -e 'sh -c nmtui':} %{F#e8e8e8}%essid%%{A}  "
+label-connected = "%{F#ffa500}%{F#e8e8e8}%upspeed% %{F#00bfff}%{F#e8e8e8}%downspeed%"
+#label-connected-foreground = #07fc59
 label-disconnected = " %{F#33} "
+label-disconected-foreground = #ff3800
 label-font = 0
 
+; Only applies if <ramp-signal> is used
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-5 = 
 
 [module/filesystem]
 type = internal/fs
@@ -470,7 +547,7 @@ offset-y = 35
 
 padding = 3
 module-margin = 2 
-separator = %{F#33}|
+separator = |
 
 font-0 = System San Francisco Display:size=10;2
 font-1 = FontAwesome:size=14;3

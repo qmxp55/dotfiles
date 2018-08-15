@@ -278,7 +278,7 @@ bindsym $mod+x exec i3lock-fancy
 #exec --no-startup-id compton 
 exec --no-startup-id compton --config ~/.compton.conf
 exec --no-startup-id redshift-gtk
-exec --no-startup-id flameshot
+#exec --no-startup-id flameshot
 
 #conectar pantalla
 #bindsym $mod+shift+m exec arandr
@@ -293,10 +293,10 @@ exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" "-112" "-112"
 
 #Dropbox
-exec --no-startup-id dropbox start
+#exec --no-startup-id dropbox start
 
-#bluetooth
-exec --no-startup-id /usr/bin/blueman-applet                 # Bluetooth Manager
+#/execbluetooth
+#exec --no-startup-id /usr/bin/blueman-applet                 # Bluetooth Manager
 
 #:::::::::::::::::::::::::::::::: i3 Panel ::::::::::::::::::::::::::::::::::::#
 
@@ -418,7 +418,7 @@ mode "$mode_gaps_outer" {
 #bindsym $mod+F2 exec nautilus
 
 #       Conky
-exec conky -d; sleep 1 && transset-df .5 -n Conky &
+#exec conky -d; sleep 1 && transset-df .5 -n Conky &
 
 #		Xresources
 exec --no-startup-id xrdb ~/.Xresources
@@ -436,5 +436,5 @@ bindsym $mod+F2 exec setxkbmap -layout es
 exec --no-startup-id "source ~/.bashrc"
 
 exec --no-startup-id i3-msg 'workspace 10; exec thunderbird'
-exec --no-startup-id i3-msg 'workspace 9; exec spotify'
+#exec --no-startup-id i3-msg 'workspace 9; exec spotify'
 exec --no-startup-id i3-msg 'workspace 1; exec firefox'
