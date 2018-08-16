@@ -243,7 +243,7 @@ exec --no-startup-id feh --bg-scale /home/omar/Pictures/rick_morty.jpg
 exec --no-startup-id conky -c ~/.conky.conf
 
 #polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id $HOME/.config/polybar/launch.sh
 #exec_always pkill -9 polybar ; polybar top
 #wifi
 exec --no-startup-id nm-applet
@@ -293,10 +293,10 @@ exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" "-112" "-112"
 
 #Dropbox
-exec_always --no-startup-id dropbox start
+exec --no-startup-id dropbox start
 
 #/execbluetooth
-#exec_always --no-startup-id /usr/bin/blueman-applet                 # Bluetooth Manager
+exec --no-startup-id /usr/bin/blueman-applet                 # Bluetooth Manager
 
 #:::::::::::::::::::::::::::::::: i3 Panel ::::::::::::::::::::::::::::::::::::#
 
@@ -438,3 +438,5 @@ exec --no-startup-id "source ~/.bashrc"
 exec --no-startup-id i3-msg 'workspace 10; exec thunderbird'
 #exec --no-startup-id i3-msg 'workspace 9; exec spotify'
 exec --no-startup-id i3-msg 'workspace 1; exec firefox'
+
+exec --no-startup-id jupyter-notebook

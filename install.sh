@@ -105,6 +105,15 @@ pacman -Qqe | grep -v "$(pacman -Qmq)" > pkglist
 echo -e "Creating the ${LBLUE}AUR pkglist${NC} file"
 pacman -Qmq > aur_pkglist
 
+thunder_dir=~/OneDrive/lite_backups/thunderbird 
+echo -e "backing up ${LBLUE}THUNDERBIRD${NC} directory at $thunder_dir"
+if [ -d "$thunder_dir" ]; then
+    rm -rf $thunder_dir
+    cp -r ~/.thunderbird ~/OneDrive/lite_backups
+else
+    cp -r ~/.thunderbird ~/OneDrive/lite_backups
+fi
+
 printf "${LRED}-------------------------------------------\n"
 printf "${YELLOW} WELL DONE! \n ${CYAN}THE TARDIS MATRIX HAS BEEN UPDATED! \n THIS LAPTOP CAN'T BE IN BETTER HANDS \n"
 printf "${LRED}-------------------------------------------\n"
