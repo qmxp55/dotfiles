@@ -78,7 +78,7 @@ font-4 = Raleway VF Beta:size=11:weight=Regular;1
 
 modules-left   = prevsong playpause nextsong spotify memory cpu filesystem 
 modules-center = i3 
-modules-right  = keyboard pavolume bluetooth redshift battery1 wireless-network clock powermenubarlauncher
+modules-right  = temperature keyboard pavolume bluetooth redshift battery1 wireless-network clock powermenubarlauncher
 
 
 separator = |
@@ -308,39 +308,6 @@ fifhteen = ${xrdb:color15:#222}
 
 
 ;THIS IS MY MODULE FOR SPOTIFY
-[module/sn]
-type = custom/text
-interval = 1
-content = "  "
-label = " %output% "
-tail = true
-format = <label>
-;content-background = ${colors.one}
-click-left = spotifycli --next 
-
-[module/sp]
-type = custom/text
-content = "  "
-;content-background = ${colors.one}
-click-left = spotifycli --prev
-
-[module/spp]
-type = custom/script
-interval = 1
-exec = /home/omar/dotfiles/polybar/playpause.sh
-format = <label>
-label = %output%
-;format-background = ${colors.one}
-click-left = spotifycli --playpause
-
-[module/sps]
-type = custom/text
-content = "  "
-format = <label>
-content-background = ${colors.one}
-
-
-
 
 [module/spotify]
 type = custom/script
@@ -354,7 +321,6 @@ click-left = xdotool key super+9
 exec = /home/omar/dotfiles/polybar/spot.sh
 tail = true
 
-
 [module/playpause]
 type = custom/script
 label = %output%
@@ -364,8 +330,6 @@ interval = 1
 exec = ~/.config/polybar/playpause.sh
 click-left = playerctl play-pause
 
-
-
 [module/nextsong]
 type = custom/text
 content = ""
@@ -373,14 +337,11 @@ content-foreground = ${colours.icons}
 click-left = playerctl next
 
 
-
 [module/prevsong]
 type = custom/text
 content = ""
 content-foreground = ${colours.icons}
 click-left = playerctl previous
-
-
 
 
 [module/redshift]
@@ -483,6 +444,65 @@ label-mounted = %used%/%total%
 ;bar-used-empty-foreground = #FFFFFF
 
 
+[module/temperature]
+type = internal/temperature
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 0.5
+
+; Thermal zone to use
+; To list all the zone types, run 
+; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
+; Default: 0
+thermal-zone = 0
+
+; Full path of temperature sysfs path
+; Use `sensors` to find preferred temperature source, then run
+; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
+; to find path to desired file
+; Default reverts to thermal zone setting
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+
+; Threshold temperature to display warning label (in degrees celsius)
+; Default: 80
+warn-temperature = 60
+
+; Whether or not to show units next to the temperature tokens (°C, °F)
+; Default: true
+units = true
+
+; Available tags:
+;   <label> (default)
+;   <ramp>
+format = %{F#ffffff}<label>
+format-foreground = #00bfff
+; Available tags:
+;   <label-warn> (default)
+;   <ramp>
+format-warn =  %{F#ffffff}<label-warn>
+format-warn-foreground = #f00
+; Available tokens:
+;   %temperature% (deprecated)
+;   %temperature-c%   (default, temperature in °C)
+;   %temperature-f%   (temperature in °F)
+label = %temperature-c%
+
+; Available tokens:
+;   %temperature% (deprecated)
+;   %temperature-c%   (default, temperature in °C)
+;   %temperature-f%   (temperature in °F)
+label-warn = %temperature-c%
+;label-warn-foreground = #f00
+
+; Requires the <ramp> tag
+; The icon selection will range from 0 to `warn-temperature`
+; with the current temperature as index.
+ramp-0 = A
+ramp-1 = B
+ramp-2 = C
+ramp-foreground = #55
+
 [module/backlight]
 type = internal/backlight
 card = intel_backlight
@@ -522,10 +542,6 @@ type = custom/text
 content = "  "
 content-foreground = #cc0000
 click-left = polybar powermenubar
-
-
-
-
 
 
 [bar/powermenubar]
