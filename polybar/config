@@ -76,7 +76,7 @@ font-4 = Raleway VF Beta:size=11:weight=Regular;1
 ;http://fontawesome.io/cheatsheet/
 ;https://shanfan.github.io/material-icons-cheatsheet/
 
-modules-left   = sp spp sn spotify memory cpu filesystem
+modules-left   = prevsong playpause nextsong spotify memory cpu filesystem 
 modules-center = i3 
 modules-right  = keyboard pavolume bluetooth redshift battery1 wireless-network clock powermenubarlauncher
 
@@ -259,6 +259,7 @@ label-indicator-padding = 2
 [module/bluetooth]
 type = custom/script
 interval = 1
+
 exec = ~/.config/polybar/bluetooth.sh
 label = "  %output% "
 click-left = blueberry
@@ -266,11 +267,17 @@ click-right = ~/.config/polybar/bluetooth.sh --toggle
 
 [module/dropbox]
 type = custom/script
-exec = /home/omar/dotfiles/dropboxStatus.sh
-format-underline = #458588
+exec = /home/omar/dotfiles/polybar/dropboxStatus.sh
+;format-underline = #458588
 click-left = dropbox start
 interval=2
-format-padding = 2
+;format-padding = 2
+
+[module/dropbox-isrunning]
+type = custom/script
+exec = ~/dotfiles/polybar/dropbox-isrunning.sh
+interval = 5
+click-left = ~/dotfiles/polybar/dropbox-isrunning.sh --toggle
 
 [module/music]
 type = custom/script
@@ -303,26 +310,28 @@ fifhteen = ${xrdb:color15:#222}
 ;THIS IS MY MODULE FOR SPOTIFY
 [module/sn]
 type = custom/text
+interval = 1
 content = "  "
+label = " %output% "
 tail = true
 format = <label>
 ;content-background = ${colors.one}
-click-left = spotify-cli --next 
+click-left = spotifycli --next 
 
 [module/sp]
 type = custom/text
 content = "  "
 ;content-background = ${colors.one}
-click-left = spotify-cli --prev
+click-left = spotifycli --prev
 
 [module/spp]
 type = custom/script
 interval = 1
 exec = /home/omar/dotfiles/polybar/playpause.sh
 format = <label>
-;label = %output%
+label = %output%
 ;format-background = ${colors.one}
-click-left = spotify-cli --playpause
+click-left = spotifycli --playpause
 
 [module/sps]
 type = custom/text

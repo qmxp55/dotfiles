@@ -293,10 +293,10 @@ exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" "-112" "-112"
 
 #Dropbox
-#exec --no-startup-id dropbox start
+exec_always --no-startup-id dropbox start
 
 #/execbluetooth
-#exec --no-startup-id /usr/bin/blueman-applet                 # Bluetooth Manager
+#exec_always --no-startup-id /usr/bin/blueman-applet                 # Bluetooth Manager
 
 #:::::::::::::::::::::::::::::::: i3 Panel ::::::::::::::::::::::::::::::::::::#
 

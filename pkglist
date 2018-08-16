@@ -16,6 +16,7 @@ bash-completion
 bind-tools
 binutils
 bison
+blueberry
 blueman
 bluez
 bluez-utils
@@ -133,6 +134,7 @@ pepper-flash
 perl
 pkgconf
 pkgfile
+playerctl
 powerline-fonts
 procps-ng
 psmisc
