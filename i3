@@ -243,7 +243,7 @@ exec --no-startup-id feh --bg-scale /home/omar/Pictures/rick_morty.jpg
 exec --no-startup-id conky -c ~/.conky.conf
 
 #polybar
-exec --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #exec_always pkill -9 polybar ; polybar top
 #wifi
 exec --no-startup-id nm-applet
@@ -293,10 +293,10 @@ exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" "-112" "-112"
 
 #Dropbox
-exec --no-startup-id dropbox start
+exec_always --no-startup-id dropbox start
 
 #/execbluetooth
-exec --no-startup-id /usr/bin/blueman-applet                 # Bluetooth Manager
+exec_always --no-startup-id /usr/bin/blueman-applet                 # Bluetooth Manager
 
 #:::::::::::::::::::::::::::::::: i3 Panel ::::::::::::::::::::::::::::::::::::#
 
@@ -421,10 +421,10 @@ mode "$mode_gaps_outer" {
 #exec conky -d; sleep 1 && transset-df .5 -n Conky &
 
 #		Xresources
-exec --no-startup-id xrdb ~/.Xresources
+exec_always --no-startup-id xrdb ~/.Xresources
 
 #		Dunst
-exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # 	Xresources, xmodmap, start urxvt daemon
 exec --no-startup-id "/usr/bin/xmodmap /home/<user>/.keymap"
@@ -439,4 +439,4 @@ exec --no-startup-id i3-msg 'workspace 10; exec thunderbird'
 #exec --no-startup-id i3-msg 'workspace 9; exec spotify'
 exec --no-startup-id i3-msg 'workspace 1; exec firefox'
 
-exec --no-startup-id jupyter-notebook
+#exec --no-startup-id jupyter-notebook

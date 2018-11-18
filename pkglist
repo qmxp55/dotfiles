@@ -51,6 +51,7 @@ e2fsprogs
 efibootmgr
 eog
 eog-plugins
+evince
 exfat-utils
 f2fs-tools
 fakeroot
@@ -175,6 +176,7 @@ texlive-pstricks
 texlive-publishers
 texlive-science
 thunderbird
+tmux
 transset-df
 ttf-font-awesome
 unrar
