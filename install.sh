@@ -67,18 +67,17 @@ for file_config in $files_config; do
 done
 
 
-echo -e "Moving ${YELLOW}polybar and SSH${NC} to $olddir"
+echo -e "Moving ${YELLOW}polybar${NC} to $olddir"
 rm -r ~/dotfiles_old/polybar
-rm -r ~/dotfiles_old/ssh
+#rm -r ~/dotfiles_old/ssh
 mv ~/.config/polybar ~/dotfiles_old/
-mv ~/.ssh ~/dotfiles_old/ssh
+#mv ~/.ssh ~/dotfiles_old/ssh
 #rm -r ~/.config/polybar
 mkdir ~/.config/polybar 
-mkdir ~/.ssh
+#mkdir ~/.ssh
 echo -e "Copying ${LBLUE}polybar and SSH${NC} files into ~/.config/polybar"
 cp polybar/* ~/.config/polybar/
-cp ssh/* ~/.ssh/
-
+#cp ssh/* ~/.ssh/
 
 
 if [ -f pkglist ]; then
@@ -117,8 +116,7 @@ fi
 printf "${LRED}-------------------------------------------\n"
 printf "${YELLOW} WELL DONE! \n ${CYAN}THE TARDIS MATRIX HAS BEEN UPDATED! \n THIS LAPTOP CAN'T BE IN BETTER HANDS \n"
 printf "${LRED}-------------------------------------------\n"
-#echo "-------------------------------------------"
-#printf "I ${RED}love${NC} Stack Overflow\n"
-#echo "WELL DONE! THE TARDIS MATRIX HAS BEEN UPDATED!"
-#echo "THIS LAPTOP CAN'T BE IN BETTER HANDS!"
-#echo "-------------------------------------------"
+
+printf "${LRED}-------------------------------------------\n"
+printf "${YELLOW} Don't forget: \n ${CYAN} git add \n git commit \n git push \n"
+printf "${LRED}-------------------------------------------\n"

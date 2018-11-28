@@ -1,0 +1,17 @@
+#SOME USEFUL COMMANDS
+
+#---- MERGE PDF'S ----
+#We use 'pdfunite'. Example:
+pdfunite pdf1 pdf2 pdf3 merged_pdf
+
+
+#---- CONVERT PNG TO PDF ----
+#Example:
+convert image.pdf image.pdf
+
+
+#---- CHANGE TIMEZONE ----
+#See list of timezones
+timedatectl list-timezones
+#change timezone. London example:
+timedatectl set-timezone Europe/London

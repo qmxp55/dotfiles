@@ -1,9 +1,7 @@
 acroread
 aladin
-apache-ant
 arandr-git
 atom-editor-bin
-ca-certificates-cacert
 compton-git
 crack-attack
 dcadec
@@ -22,7 +20,6 @@ hdf-java
 hdf4-java
 hdf5-openmpi-java
 hdfview
-hunspell-en
 i3blocks-gaps-git
 i3ipc-glib-git
 i3lock-fancy-git
@@ -50,7 +47,6 @@ pcmciautils
 pokemon-terminal-git
 polybar
 python-daemonocle
-qca-qt5
 qt-installer-framework
 qt-installer-framework-docs
 redshift-git
