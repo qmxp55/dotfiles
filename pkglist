@@ -6,6 +6,7 @@ antergos-desktop-settings
 antergos-keyring
 antergos-midnight-timers
 antergos-mirrorlist
+audacious
 autoconf
 automake
 awesome-terminal-fonts
@@ -24,6 +25,7 @@ boost
 btrfs-progs
 bzip2
 bzr
+calcurse
 chromium
 cifs-utils
 cmake
@@ -162,6 +164,7 @@ tar
 terminology
 terminus-font
 termite
+tex-gyre-fonts
 texinfo
 texlive-bibtexextra
 texlive-core
