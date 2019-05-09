@@ -67,16 +67,20 @@ for file_config in $files_config; do
 done
 
 
-echo -e "Moving ${YELLOW}polybar${NC} to $olddir"
+echo -e "Moving ${YELLOW}polybar and dunst${NC} to $olddir"
 rm -r ~/dotfiles_old/polybar
+rm -r ~/dotfiles_old/dunst
 #rm -r ~/dotfiles_old/ssh
 mv ~/.config/polybar ~/dotfiles_old/
+mv ~/.config/dunst ~/dotfiles_old/
 #mv ~/.ssh ~/dotfiles_old/ssh
 #rm -r ~/.config/polybar
 mkdir ~/.config/polybar 
+mkdir ~/.config/dunst 
 #mkdir ~/.ssh
-echo -e "Copying ${LBLUE}polybar and SSH${NC} files into ~/.config/polybar"
-cp polybar/* ~/.config/polybar/
+echo -e "Copying ${LBLUE}polybar and dunst${NC} files to ~/.config/polybar and ~/.config/dunst"
+cp $dir/polybar/* ~/.config/polybar/
+cp $dir/dunst/* ~/.config/dunst/
 #cp ssh/* ~/.ssh/
 
 
@@ -93,8 +97,6 @@ if [ -f aur_pkglist ]; then
 else
     echo -e "file ${LBLUE}aur_pkglist${NC} does not exist."
 fi
-
-
 
 
 echo -e "Creating the ${LBLUE}pkglist${NC} file"
@@ -118,5 +120,5 @@ printf "${YELLOW} WELL DONE! \n ${CYAN}THE TARDIS MATRIX HAS BEEN UPDATED! \n TH
 printf "${LRED}-------------------------------------------\n"
 
 printf "${LRED}-------------------------------------------\n"
-printf "${YELLOW} Don't forget: \n ${CYAN} git add \n git commit \n git push \n"
+printf "${YELLOW} Don't forget: \n ${CYAN} git add \n  git commit \n  git push \n"
 printf "${LRED}-------------------------------------------\n"

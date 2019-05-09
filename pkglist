@@ -132,7 +132,6 @@ patch
 pciutils
 pcsclite
 pdfsam
-pdfshuffler
 pepper-flash
 perl
 pkgconf
@@ -145,7 +144,6 @@ pulseaudio-bluetooth
 python-gobject
 python-pyqt5
 python2-gnomekeyring
-qt4
 ranger
 reflector
 reiserfsprogs
@@ -199,7 +197,6 @@ which
 whois
 wine
 wireless_tools
-wpa_actiond
 xcompmgr
 xfce4-appfinder
 xfsprogs
