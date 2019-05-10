@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#eval $(thefuck --alias) 
+#eval $(thefuck --alias)
 
 # Visualiza los ficheros y directorios
 function cdls { cd "$1"; ls --color;}
@@ -121,28 +121,9 @@ alias ls='ls $LS_OPTIONS'
 #[ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
 [ -n "$XTERM_VERSION" ] && sleep .1 && transset-df -a >/dev/null
 
-#ALIAS:
-alias musica='ncmpcpp -S visualizer'
-alias terminal='xrdb ~/.Xresources'
-alias gestor='arch-tools.sh'
-alias actualizar='pacaur -Syyu --noconfirm'
-alias limpiar='sudo limpiar'
-alias red='sudo systemctl restart NetworkManager'
-alias sincronizar='ping -c 6 8.8.8.8'
-alias swap='sudo swapon -p 32767 /dev/sdc1'
-alias t=tmux
-alias inter='slurm -zsi wlan0'
-alias llave='~/.scripts/./llave.sh'
-
-# MONITORS
-alias monitor1='glances -1'
-#alias monitor2='slurm -i wlan0'
-alias monitor2='neofetch'
-#alias monitor3='vnstat -l -u -i wlp3s0'
-alias monitor3='telnet towel.blinkenlights.nl'
-alias monitor4='watch -n 1 -d free'
-alias monitor5='cmatrix -bC magenta'
-alias hora='tty-clock -cstDC red'
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -184,5 +165,20 @@ alias l='ls -CF'
 #  LIGHTWHITE=	'\e[1;37m'
 
 # added by Anaconda3 installer
-export PATH="/home/omar/anaconda3/bin:$PATH"
+# export PATH="/home/omar/anaconda3/bin:$PATH"  # commented out by conda initialize
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/omar/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/omar/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/omar/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/omar/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
