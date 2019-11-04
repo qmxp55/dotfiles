@@ -17,6 +17,7 @@ bash-completion
 bind-tools
 binutils
 bison
+blender
 blueberry
 blueman
 bluez
@@ -45,6 +46,7 @@ dhcpcd
 diffutils
 dmd
 dmraid
+docker
 dosfstools
 downgrade
 dropbox
@@ -69,6 +71,7 @@ gawk
 gcc
 gcc-libs
 gettext
+gimp
 git
 glances
 glibc
@@ -79,6 +82,7 @@ groff
 grub
 grub2-theme-antergos
 gsfonts
+gsl
 gzip
 haveged
 hostapd
@@ -94,6 +98,7 @@ iputils
 ipw2100-fw
 ipw2200-fw
 jfsutils
+jhead
 kile
 kodi
 less
@@ -111,6 +116,7 @@ make
 man-db
 man-pages
 mdadm
+mencoder
 mlocate
 modemmanager
 mpc
@@ -125,6 +131,7 @@ nfs-utils
 nilfs-utils
 nitrogen
 ntfs-3g
+openshot
 openssh
 os-prober
 pacman
@@ -143,7 +150,6 @@ psmisc
 pulseaudio-bluetooth
 python-gobject
 python-pyqt5
-python2-gnomekeyring
 ranger
 reflector
 reiserfsprogs
@@ -201,7 +207,6 @@ xcompmgr
 xfce4-appfinder
 xfsprogs
 xpad
-yaourt
 youtube-dl
 zsh
 zsnes

@@ -4,6 +4,7 @@ arandr-git
 atom-editor-bin
 compton-git
 conkyforecast
+cournal
 crack-attack
 dcadec
 deepin-grub2-themes
@@ -35,10 +36,8 @@ img2xterm
 j4-dmenu-desktop-git
 js
 lib32-libtxc_dxtn
-libmagick
-libmariadbclient
+libgnomecanvas
 libnm-gtk
-libsystemd
 libtxc_dxtn
 mingetty
 mingw-w64-binutils
@@ -59,6 +58,7 @@ pokemon-terminal-git
 polybar
 python-dae
 python-daemonocle
+python2-gnomekeyring
 python2-poppler
 python2-pypdf
 qt-installer-framework
@@ -70,6 +70,7 @@ siji-git
 skypeforlinux-bin
 spotify
 spotify-adkiller-git
+stacer-bin
 tdrop-git
 terminology-themes-git
 topcat
@@ -87,5 +88,7 @@ vuze
 wpa_actiond
 xbindkeys_config-gtk2
 xevdevserver
-xorg-mkfontdir
+xournal
+yaourt
 zd1211-firmware
+zoom

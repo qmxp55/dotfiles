@@ -5,6 +5,7 @@ alias contras='sh ~/Dropbox/contras.sh'
 alias shit='history | grep'
 alias jlab='jupyter-lab --browser=firefox'
 alias ages='sh ~/Desktop/AOE.sh'
+alias wacom='sudo /home/omar/GfxTablet/driver-uinput/networktablet'
 
 #ALIAS:
 alias musica='ncmpcpp -S visualizer'
