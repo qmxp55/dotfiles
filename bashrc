@@ -85,3 +85,6 @@ else
 fi
 unset __conda_setup
 # <<< conda init <<<
+
+VISUAL=vim; export VISUAL EDITOR=vim; export EDITOR
+
