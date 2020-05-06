@@ -25,7 +25,6 @@ bluez-utils
 boost
 btrfs-progs
 bzip2
-bzr
 calcurse
 chromium
 cifs-utils
@@ -131,7 +130,6 @@ nfs-utils
 nilfs-utils
 nitrogen
 ntfs-3g
-openshot
 openssh
 os-prober
 pacman
@@ -141,7 +139,6 @@ pcsclite
 pdfsam
 pepper-flash
 perl
-pkgconf
 pkgfile
 playerctl
 powerline-fonts
@@ -182,9 +179,9 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-science
+texmaker
 thunderbird
 tmux
-transset-df
 ttf-font-awesome
 unrar
 unzip
@@ -207,6 +204,5 @@ xcompmgr
 xfce4-appfinder
 xfsprogs
 xpad
-youtube-dl
 zsh
 zsnes
