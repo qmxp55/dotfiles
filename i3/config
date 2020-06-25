@@ -51,7 +51,7 @@ font xft:Hack 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec gnome-terminal
 #bindsym $mod+Return exec terminology
 #bindsym $mod+Return exec x-terminal-emulator
 #bindsym $mod+Return exec termite
@@ -271,8 +271,8 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+n exec x-terminal-emulator -e ranger
 #bindsym $mod+n exec termite -e ranger
 bindsym $mod+shift+n exec nautilus 
-bindsym $mod+shift+Return exec tdrop -a x-terminal-emulator
-bindsym $mod+m exec tdrop -a nautilus
+#bindsym $mod+shift+Return exec tdrop -a x-terminal-emulator
+#bindsym $mod+m exec tdrop -a nautilus
 
 #lock
 bindsym $mod+x exec i3lock-fancy
@@ -295,7 +295,7 @@ exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" "-112" "-112"
 
 #Dropbox
-exec_always --no-startup-id dropbox start
+#exec_always --no-startup-id dropbox start
 
 #/execbluetooth
 exec_always --no-startup-id /usr/bin/blueman-applet                 # Bluetooth Manager
@@ -438,7 +438,8 @@ bindsym $mod+F2 exec setxkbmap -layout es
 exec --no-startup-id "source ~/.bashrc"
 
 exec --no-startup-id i3-msg 'workspace 10; exec thunderbird'
-#exec --no-startup-id i3-msg 'workspace 9; exec spotify'
-exec --no-startup-id i3-msg 'workspace 1; exec firefox'
+exec --no-startup-id i3-msg 'workspace 9; exec spotify'
+exec --no-startup-id i3-msg 'workspace 1; exec chromium'
+exec --no-startup-id i3-msg 'workspace 8; exec slack'
 
 #exec --no-startup-id jupyter-notebook

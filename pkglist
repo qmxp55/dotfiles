@@ -1,5 +1,6 @@
 acpid
 alsa-utils
+android-tools
 antergos-common-meta
 antergos-deepin-meta
 antergos-desktop-settings
@@ -26,6 +27,8 @@ boost
 btrfs-progs
 bzip2
 calcurse
+calibre
+calibre-common
 chromium
 cifs-utils
 cmake
@@ -39,6 +42,8 @@ cronie
 cryptsetup
 cups
 cups-pk-helper
+curl
+deepin-qt5platform-plugins
 device-mapper
 devilspie
 dhcpcd
@@ -69,6 +74,7 @@ fzf
 gawk
 gcc
 gcc-libs
+gcc-objc
 gettext
 gimp
 git
@@ -96,11 +102,14 @@ iproute2
 iputils
 ipw2100-fw
 ipw2200-fw
+jdk8-openjdk
 jfsutils
 jhead
 kile
 kodi
 less
+lib32-nspr
+lib32-sqlite
 libreoffice-fresh
 libreoffice-fresh-en-gb
 libtool
@@ -116,6 +125,7 @@ man-db
 man-pages
 mdadm
 mencoder
+midori
 mlocate
 modemmanager
 mpc
@@ -132,6 +142,7 @@ nitrogen
 ntfs-3g
 openssh
 os-prober
+package-query
 pacman
 patch
 pciutils

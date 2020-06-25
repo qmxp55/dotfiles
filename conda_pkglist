@@ -4,7 +4,7 @@
 @EXPLICIT
 https://repo.anaconda.com/pkgs/main/linux-64/conda-env-2.6.0-1.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/blas-1.0-mkl.tar.bz2
-https://conda.anaconda.org/anaconda/linux-64/ca-certificates-2020.1.1-0.tar.bz2
+https://repo.anaconda.com/pkgs/main/linux-64/ca-certificates-2020.1.1-0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/gmp-6.1.2-h6c8ec71_1.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/icu-58.2-h9c2bf20_1.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/intel-openmp-2019.1-144.tar.bz2
@@ -33,7 +33,7 @@ https://repo.anaconda.com/pkgs/main/linux-64/lz4-c-1.8.1.2-h14c3975_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/mkl-2019.1-144.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/mpfr-4.0.1-hdf1c602_3.tar.bz2
 https://conda.anaconda.org/anaconda/linux-64/ncurses-6.2-he6710b0_0.tar.bz2
-https://conda.anaconda.org/anaconda/linux-64/openssl-1.1.1g-h7b6447c_0.tar.bz2
+https://repo.anaconda.com/pkgs/main/linux-64/openssl-1.1.1g-h7b6447c_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/patchelf-0.9-he6710b0_3.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/pcre-8.42-h439df22_0.tar.bz2
 https://conda.anaconda.org/anaconda/linux-64/xz-5.2.5-h7b6447c_0.tar.bz2
@@ -73,13 +73,12 @@ https://repo.anaconda.com/pkgs/main/linux-64/beautifulsoup4-4.6.3-py37_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/bitarray-0.8.3-py37h14c3975_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/boto-2.49.0-py37_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/cairo-1.14.12-h8948797_3.tar.bz2
-https://conda.anaconda.org/anaconda/linux-64/certifi-2020.4.5.1-py37_0.tar.bz2
+https://repo.anaconda.com/pkgs/main/linux-64/certifi-2020.6.20-py37_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/chardet-3.0.4-py37_1.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/click-7.0-py37_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/cloudpickle-0.6.1-py37_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/colorama-0.4.1-py37_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/contextlib2-0.5.5-py37_0.tar.bz2
-https://repo.anaconda.com/pkgs/main/linux-64/curl-7.63.0-hbc83047_1000.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/dask-core-1.0.0-py37_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/decorator-4.3.0-py37_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/defusedxml-0.5.0-py37_1.tar.bz2
@@ -281,4 +280,3 @@ https://repo.anaconda.com/pkgs/main/linux-64/jupyterlab-0.35.3-py37_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/spyder-3.3.2-py37_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/_ipyw_jlab_nb_ext_conf-0.1.0-py37_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/jupyter-1.0.0-py37_7.tar.bz2
-https://repo.anaconda.com/pkgs/main/linux-64/anaconda-2018.12-py37_0.tar.bz2
