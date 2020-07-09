@@ -268,11 +268,13 @@ bindsym $mod+minus scratchpad show
 #aplicacions
 #bindsym $mod+g exec firefox-beta
 #bindsym $mod+t exec telegram-desktop
-bindsym $mod+n exec x-terminal-emulator -e ranger
+#bindsym $mod+n exec x-terminal-emulator -e ranger
 #bindsym $mod+n exec termite -e ranger
-bindsym $mod+shift+n exec nautilus 
+#bindsym $mod+shift+n exec nautilus 
 #bindsym $mod+shift+Return exec tdrop -a x-terminal-emulator
 #bindsym $mod+m exec tdrop -a nautilus
+bindsym $mod+m exec dde-file-manager
+bindsym $mod+n exec gnome-terminal -e ranger
 
 #lock
 bindsym $mod+x exec i3lock-fancy

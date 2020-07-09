@@ -116,6 +116,7 @@ libtool
 licenses
 linux
 linux-headers
+lld
 logrotate
 lua
 lvm2
@@ -203,6 +204,7 @@ vbam-wx
 vi
 vim
 virtualbox
+virtualbox-host-modules-arch
 vlc
 vnstat
 wavemon
@@ -215,5 +217,6 @@ xcompmgr
 xfce4-appfinder
 xfsprogs
 xpad
+yay
 zsh
 zsnes

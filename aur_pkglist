@@ -37,6 +37,7 @@ i3scrot-git
 icu60
 idnkit
 img2xterm
+intel-tbb
 j4-dmenu-desktop-git
 js
 lib32-libtxc_dxtn
@@ -68,6 +69,7 @@ python-dae
 python-daemonocle
 python-sip-pyqt5
 python2-gnomekeyring
+python2-pillow
 python2-poppler
 python2-pypdf
 python2-setproctitle
@@ -103,10 +105,10 @@ vivaldi
 vmware-patch
 vuze
 wpa_actiond
-xbindkeys
 xbindkeys_config-gtk2
 xevdevserver
+xorg-font-utils
+xorg-fonts-alias
 xournal
-yaourt
 zd1211-firmware
 zoom
